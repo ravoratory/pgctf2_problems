@@ -1,7 +1,7 @@
-## First OSINT
-CTFにはOSINT(Open Source Intelligence)というジャンルがあります。
-普通は公開されている情報をもとに探すのですが、今回はPGritのどこかにフラグがあるので探してみましょう。
-主催の二人(@takumah, @Konomura)が怪しそうですが…?
+## Binary string
 
+バイナリ文字列というものをご存じでしょうか？
+`70676374 667b6269 6e617279 5f337870 72333535 69306e7d`
+を変換してみましょう。
 ## flag
-pgctf{found_the_flag}
+pgctf{binary_3xpr355i0n}
