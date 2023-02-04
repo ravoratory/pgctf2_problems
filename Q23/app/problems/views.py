@@ -1,9 +1,9 @@
-import os
+from decouple import config
 
 from django.http import HttpRequest, HttpResponse
 from django.template import engines
 
-FLAG = os.getenv("FLAG")
+FLAG = config("FLAG")
 
 
 def index(request: HttpRequest) -> HttpResponse:
