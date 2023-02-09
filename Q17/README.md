@@ -4,13 +4,13 @@ flagを覗くことはできますか？
 
 ```dockerfile
 FROM alpine:3.14
-ARG flag
-RUN echo ${flag} > /flag.txt
+COPY ./flag.txt /
 ```
 
 ```shell
-docker build -t pgctf-image . --build-arg flag="pgctf{xxxxxx}"
-docker save pgctf-image | gzip pgctf-image.tar.gz
+echo "pgctf{xxxxxx}" > flag.txt
+docker build -t pgctf-image .
+docker save pgctf-image | gzip > pgctf-image.tar.gz
 ```
 
 ## 配布物
