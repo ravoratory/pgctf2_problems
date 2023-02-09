@@ -8,6 +8,7 @@ RUN rm /flag.txt
 ```
 
 ```shell
+echo "pgctf{xxxxxx}" > flag.txt
 docker build -t pgctf-image-3 .
 docker save pgctf-image-3 | gzip > pgctf-image-3.tar.gz
 ```
