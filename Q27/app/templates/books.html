@@ -22,7 +22,7 @@
       {% for book in books %}
       <li class="mb-3 list-group-item">
         <h3>{{ book.title }}</h3>
-        <div>{{ book.author }} | {{ book.publisher }} {{ book.published_date }}</div>
+        <div>{{ book.author }} 著 | {{ book.publisher }} {{ book.published_date }}</div>
         <div>{{ book.description }}</div>
       </li>
       {% endfor %}
