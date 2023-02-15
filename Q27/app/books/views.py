@@ -32,7 +32,6 @@ def export_book_view(request: HttpRequest):
     response['Content-Disposition'] = f'attachment; filename="books.{extension.get(delimiter, "csv")}"'
 
     writer = csv.writer(response, doublequote=False, escapechar=" ", quoting=csv.QUOTE_NONE)
-    writer.writerow([field])
     writer.writerow([books.get(field)])
 
     return response
