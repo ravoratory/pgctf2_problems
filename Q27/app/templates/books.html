@@ -60,7 +60,7 @@
         const field = form_data.get('field')
         const delimiter = form_data.get('delimiter')
 
-        const response = await fetch(`/export?title=${title}&field=${field}&delimiter=${delimiter}`)
+        const response = await fetch(`/export?delimiter=${delimiter}&field=${field}&title=${title}`)
         const a = document.createElement('a')
         a.href = URL.createObjectURL(await response.blob())
         a.download = 'books.csv'

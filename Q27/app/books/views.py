@@ -25,6 +25,7 @@ def export_book_view(request: HttpRequest):
     field = request.GET.get("field", "title")
     field = field if field in fields else "title"
     delimiter = request.GET.get("delimiter", ",")
+    print(f"hoge{delimiter}hoge", flush=True)
     extension = {",": "csv", " ": "tsv"}
 
     books = Book.objects.filter(title__icontains=title).aggregate(**{field: StringAgg(field, delimiter=delimiter)})
