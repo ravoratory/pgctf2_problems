@@ -1,11 +1,27 @@
-## アンミカ
-白って200色あんねん
+## Docker 2
+今度はflag.txtがイメージの中に存在しません
+flagを確認することはできますか？
+
+```dockerfile
+FROM alpine:3.14
+ARG flag
+RUN apk update
+```
+
+```shell
+docker build -t pgctf-image-2 . --build-arg flag="pgctf{xxxxxx}"
+docker save pgctf-image-2 | gzip > pgctf-image-2.tar.gz
+```
 
 ## 配布物
-- anmika.png
+- Dockerfile
+- pgctf-image-2.tar.gz
 
 ## Flag
-pgctf{strongest_color_vision}
+pgctf{build_arg_is_not_secure}
 
 ## Writeup
-\#ffffffの上に\#fffffeで文字を書いているので, バケツツールを使って背景を塗りつぶすと文字だけ浮きあがる
+```shell
+docker load < pgctf-image-2.tar.gz
+docker history pgctf-image-2:latest
+```
