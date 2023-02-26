@@ -5,7 +5,7 @@
 なし
 
 ## Flag
-pgctf{cocoro_ga_pyonpyon}
+pgctf{tedeza_rize}
 
 ## Writeup
 タイトルにもなっているCVE-2020-7471のSTRING_AGGの脆弱性を使う
