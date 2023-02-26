@@ -1,11 +1,13 @@
-## Hidden PDF
-Flagが隠れて見えない?
+## Unreadable QR
 
-## 配布物
-- PDF.pdf
+おなじみQRコード
 
-## Flag
-pgctf{hide_and_seek}
+今回は情報が欠けているから読めないのではなく…？
 
 ## Writeup
-文字をドラッグすると隠れた部分も選択できるので後はコピペ
+
+3色に分解する
+
+## flag
+
+pgctf{triple_qr_Vp203S3}
